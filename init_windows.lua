@@ -377,3 +377,4 @@ vim.keymap.set("n", "<A-w>", function()
   vim.o.wrap = not vim.o.wrap
   print("Toggled text wrapping")
 end, { desc = "Toggle wrap" })
+
