@@ -232,8 +232,10 @@ vim.keymap.set("n", "<leader>ce", ":CopilotChatExplain<CR>", chat_opts, { desc =
 
 -- Terminal & Window Setup
 
-vim.opt.shell = [["/bin/nash"]]
-vim.opt.shellcmdflag = "-c"
+vim.opt.shell = [["C:\\Program Files\\PowerShell\\7\\pwsh.exe"]]
+vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command"
+vim.opt.shellredir = "-RedirectStandardOutput %s -NoNewWindow -Wait"
+vim.opt.shellpipe = "2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode"
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
